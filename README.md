@@ -1,258 +1,174 @@
-# [Nuxt Black Dashboard](https://demos.creative-tim.com/nuxt-black-dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnuxt-black-dashboard&text=Nuxt%20Black%20Dashboard%20-%20Nuxt%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fnuxt-black-dashboard%2F&via=creativetim&hashtags=vuejs%2Cbootstrap%2Cnuxt%2Ccreativetim%2Ccreativetimofficial)
+# TP Frontend TTADS
 
+## TP FINAL PUNTO DE VENTA
 
+Integrantes: Caciorgna, Gerardo - Giovanni, Martin - Vilchez, Joaquin
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nuxt-black-dashboard.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nuxt-black-dashboard.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+El trabajo a realizar se trata de un punto de venta comercial que cuenta con las diferentes funciones necesarias para un comercio de cualquier indole. Permitirá administrar ventas, compras, stock, cobros, proveedores y pagos. El mismo tendra acceso a API's como Mercado Pago para permitir pagos con tarjeta de credito/debito y cualquier otra necesaria para el flujo del sistema.
 
-![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/opt_bd_nuxjs_thumbnail.jpg)
+### Punto de venta
 
+Sección para el cajero que permite ingresar los productos a vender a traves de un lector de codigo de barras o el codigo interno del mismo. A medida que se van agregando dichos productos el sistema los va agregando a un carrito de compras con sus respectivas reglas de negocio. Una vez finalizado la carga de los productos, se puede pagar con efectivo o tarjeta y una vez abonado, el sistema almacena la venta e imprime un ticket, como asi tambien reduce el stock del producto en el sistema.
 
-[Nuxt Black Dashboard](https://demos.creative-tim.com/nuxt-black-dashboard) is a beautiful Bootstrap 4 Admin Dashboard that comes in 2 versions: Dark and Light Mode. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
+### Escritorio
 
-We made it our priority to not add things that you don't need, so the Nuxt Black Dashboard comes with just enough features for you to easily use. It combines multiple components and plugins and features numerous example of how it can be used. Inside the archive, you will also find multiple example pages to get you started or provide inspiration.
+En esta sección se mostrarán los accesos directos a las diferentes funciones como asi tambien mostrará estadisticas de ventas, compras e información necesaria para el administrador. También contará con secciones introductorias para guiar al usuario a las funciones mas importantes.
 
-[Nuxt Black Dashboard](https://demos.creative-tim.com/nuxt-black-dashboard) is the extended version of [Black Dashboard](https://www.creative-tim.com/product/black-dashboard). Based on feedback from people that downloaded and used it, we have added needed components, and we have created multiple examples pages. We are curious to see how you want to use it and also improve it, so let us know any feedback you have.
+### Stock
 
+Aqui el sistema mostrara la lista de productos con sus respectivas categorias e infomracion relacionada. También se podra realizar el ABM de los productos y categorías. Tambien se podra gestionar cupones de descuento para determinados productos o categorias enteras.
 
-Special thanks go for the owners of these plugins:
-- [chartjs](https://www.chartjs.org/)
-- [nucleoapp](https://nucleoapp.com/?ref=1712)
-- [perfect-scrollbar](https://www.npmjs.com/package/perfect-scrollbar)
-- [element-ui](https://element.eleme.io)
-- [nuxt.js](https://nuxtjs.org)
+### Ventas
 
-We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+En esta sección se registraran todas las ventas realizadas en el comercio, como asi tambien agregar nuevas de forma manual.
 
-**Example Pages** We wanted to fully display the power of this dashboard, so the kit comes packed with examples showing you how to use the components.
+### Compras
 
-## Table of Contents
+Esta seccion contará con funciones como agregar, editar y eliminar proveedores y gestionar y listar las compras de los productos del comercio.
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+### Configuraciones
 
+Aqui se podra configurar todo la informacion relacionada con el comercio que saldra en los tickets y tambien la de los usuarios con acceso al sistema y la vinculacion con las diferentes API externas al sistema.
 
-## Versions
+### Configuraciones
 
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/html-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-react)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/vue-black-dashboard)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-angular)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/django-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-django)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/flask-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-flask)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/laravel-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-laravel)
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nuxtjs-logo.jpg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-nuxt)
+| Requerimiento funcional      | cant. mín.<br>1 o 2 integ | cant. máx.<br>3 o 4 integ | Detalle/Listado de casos                       | Cumple |
+| :--------------------------- | ------------------------: | ------------------------: | :--------------------------------------------- | ------ |
+| ABMC simple                  |                 1 x integ |                 1 x integ | Categoría, Usuario, Proveedor                  |
+| ABMC dependiente             |                         1 |                         2 | Producto, Descuento                            |
+| Listado simple               |                         1 |                         1 | Categoría                                      |
+| Listado complejo obligatorio |                         1 |                         2 | Productos (Categorias), Descuentos (Productos) |
+| Listado adicional con filtro |                         0 |                         0 | Ninguno                                        |
+| Detalle básico               |                     1(\*) |                     2(\*) | Pedido, Proveedor                              |
+| Detalle parametrizable       |                         0 |                         0 | -                                              |
+| Otros                        |                         0 |                         0 |                                                |
 
+### Diagrama Entidad Relación
 
-| HTML | React | Vue | Angular |
-| --- | --- | --- | --- |
-| [![Black Dashboard HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard/black-dashboard.jpg)](https://www.creative-tim.com/product/black-dashboard) | [![Black Dashboard React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-react/black-dashboard-react.jpg)](https://www.creative-tim.com/product/black-dashboard-react) | [![Vue Black Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-black-dashboard/vue-black-dashboard.jpg)](https://www.creative-tim.com/product/vue-black-dashboard) | [![Black Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-angular/opt_bd_angular_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-angular) |
+<img src="https://i.ibb.co/nQZhgPV/TTADS-DER.jpg" alt="TTADS-DER" border="0" />
 
-| Django | Flask | Laravel | Nuxt |
-| --- | --- | --- | --- |
-| [![Black Dashboard Django](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-django/opt_bdfree_django_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-django) | [![Black Dashboard Flask](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-flask/opt_bd_flask_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-flask) |[![Black Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-laravel/opt_blk_laravel_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-laravel) |[![Nuxt Black Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/opt_bd_nuxjs_thumbnail.jpg)](https://www.creative-tim.com/product/nuxt-black-dashboard) |
+### 1.1 - Desarrollo
 
-## Demo
+Desarrollar un backend utilizando una API REST o GraphQL y un frontend parcial con las siguientes caracterísitcas:
 
-| Dashboard | User Profile | Tables | Maps | Notification |
-| --- | --- | --- | --- | --- |
-| [![Start page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/Dashboard.png)](https://demos.creative-tim.com/nuxt-black-dashboard) | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/User.png)](https://demos.creative-tim.com/nuxt-black-dashboard/user) | [![Tables page ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/Tables.png)](https://demos.creative-tim.com/nuxt-black-dashboard/regular) | [![Maps Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/Maps.png)](https://demos.creative-tim.com/nuxt-black-dashboard/google) | [![Notification page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-black-dashboard/Notification.png)](https://demos.creative-tim.com/nuxt-black-dashboard/notifications)
+- El backend debe ser programado en JavaScript con NodeJS.
+- Debe utilizar un framework/middleware. Se dará soporte sobre Express pero podrán utilizarse alternativas si así se prefiere.
+- La persistencia debe realizarse utilizando un ODM/ORM con una base de datos persistente acorde a la tecnología que se utilice.
+- El frontend debe realizarse con un framework como Angular u otro seleccionado, html 5 y para CSS debe usarse un preprocessador o framework.
+- El tema y alcance del trabajo debe ser propuesto por los alumnos y aprobado por los docentes de la cátedra (o utilizar el del año 2017)
 
-[View More](https://demos.creative-tim.com/nuxt-black-dashboard).
+### 1.2 - Funcionalidad
 
+Ver [checklist]
 
-## Download and Installation
+#### 1.2.1 - Backend por API REST o GraphQL
 
-- [Download from Creative Tim](https://www.creative-tim.com/product/nuxt-black-dashboard).
-- [Download from Github](https://github.com/creativetimofficial/nuxt-black-dashboard).
+- ABMC:
 
-## Documentation
-The documentation for the Nuxt Black Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/nuxt/overview/black-dashboard).
+  - ABMC de entidad simple (no depende de otras entidades) por API. _Al menos 1 por integrante_
 
+  - ABMC de una entidad que requiera de otra ya existente de la que se hizo ABMC en el item anterior. Ej: ABMC de articulos donde un atributo sea la categoría que a su vez es una entidad con ABMC. _Grupos de 1 o 2 miembros: al menos 1. Grupos de 3 y 4 miembros: 2 o más_
 
-## File Structure
+  - Otros ABMC que exedan el mínimo requerido pueden hacerse manualmente por base de datos o por API. Si se hacen por API suman nota adicional. Sólo se considerarán el doble de ABMCs
 
-Within the download you'll find the following directories and files:
+- Listados por API:
 
-```
-|-- Nuxt Black Dashboard
-    |-- CHANGELOG.md
-    |-- README.md
-    |-- app.html
-    |-- config.js
-    |-- jsconfig.json
-    |-- nuxt.config.js
-    |-- package.json
-    |-- assets
-    |   |-- README.md
-    |   |-- css
-    |   |   |-- demo.css
-    |   |   |-- nucleo-icons.css
-    |   |-- fonts
-    |   |   |-- nucleo.eot
-    |   |   |-- nucleo.ttf
-    |   |   |-- nucleo.woff
-    |   |   |-- nucleo.woff2
-    |   |-- sass
-    |       |-- black-dashboard.scss
-    |       |-- dashboard
-    |       |-- vendor
-    |           |-- bootstrap-rtl.scss
-    |-- components
-    |   |-- Badge.vue
-    |   |-- BaseAlert.vue
-    |   |-- BaseButton.vue
-    |   |-- BaseDropdown.vue
-    |   |-- BasePagination.vue
-    |   |-- BaseProgress.vue
-    |   |-- BaseSwitch.vue
-    |   |-- BaseTable.vue
-    |   |-- CloseButton.vue
-    |   |-- LoadingPanel.vue
-    |   |-- Modal.vue
-    |   |-- README.md
-    |   |-- index.js
-    |   |-- Breadcrumb
-    |   |   |-- Breadcrumb.vue
-    |   |   |-- BreadcrumbItem.vue
-    |   |   |-- RouteBreadcrumb.vue
-    |   |-- Cards
-    |   |   |-- Card.vue
-    |   |-- Charts
-    |   |   |-- BarChart.js
-    |   |   |-- LineChart.js
-    |   |   |-- config.js
-    |   |   |-- utils.js
-    |   |-- Dashboard
-    |   |   |-- TaskList.vue
-    |   |   |-- UserTable.vue
-    |   |-- Inputs
-    |   |   |-- BaseCheckbox.vue
-    |   |   |-- BaseInput.vue
-    |   |   |-- BaseRadio.vue
-    |   |   |-- IconCheckbox.vue
-    |   |-- Layout
-    |   |   |-- Content.vue
-    |   |   |-- ContentFooter.vue
-    |   |   |-- DashboardLayout.vue
-    |   |   |-- DashboardNavbar.vue
-    |   |   |-- LoadingMainPanel.vue
-    |   |   |-- SidebarSharePlugin.vue
-    |   |-- Navbar
-    |   |   |-- BaseNav.vue
-    |   |   |-- NavbarToggleButton.vue
-    |   |-- NotificationPlugin
-    |   |   |-- Notification.vue
-    |   |   |-- Notifications.vue
-    |   |   |-- index.js
-    |   |-- SidebarPlugin
-    |   |   |-- SideBar.vue
-    |   |   |-- SidebarItem.vue
-    |   |   |-- index.js
-    |   |-- UserProfile
-    |   |   |-- EditProfileForm.vue
-    |   |   |-- UserCard.vue
-    |-- lang
-    |   |-- ar.js
-    |   |-- en.js
-    |-- layouts
-    |   |-- README.md
-    |   |-- auth.vue
-    |   |-- default.vue
-    |-- middleware
-    |   |-- README.md
-    |-- pages
-    |   |-- .DS_Store
-    |   |-- README.md
-    |   |-- google.vue
-    |   |-- index.vue
-    |   |-- notifications.vue
-    |   |-- regular.vue
-    |   |-- rtl.vue
-    |   |-- starter-page.vue
-    |   |-- typography.vue
-    |   |-- user.vue
-    |   |-- GeneralViews
-    |   |   |-- NotFoundPage.vue
-    |-- plugins
-    |   |-- README.md
-    |   |-- RTLPlugin.js
-    |   |-- dashboard-plugin.js
-    |   |-- globalComponents.js
-    |   |-- globalDirectives.js
-    |   |-- directives
-    |   |   |-- click-ouside.js
-    |   |-- extra
-    |       |-- polyfills.js
-    |-- static
-    |   |-- README.md
-    |   |-- favicon.png
-    |   |-- icon.png
-    |   |-- sw.js
-    |   |-- img
-    |-- store
-    |   |-- README.md
-    |-- util
-        |-- throttle.js
-```
+  - Listado simple: al menos uno de las entidades creadas por API. _Al menos 1 listado sin importar la cantidad de integrantes_
+  - Listado complejo:
 
-## Browser Support
+    _Grupos de hasta 2 integrantes: al menos 1 listado complejo. Grupos de 3 y 4 miembros: 2 listados complejos de cualquier opción._
 
-At present, we officially aim to support the last two versions of the following browsers:
+    - Opción 1: debe incluir datos de al menos dos entidades.
+    - Opción 2: el listado debe permitir filtrar por al menos 1 atributo.
 
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+  - Sólo se considerarán listados complejos con filtros de uno o más atributos para nota adicional.
 
+- Detalle:
 
-## Resources
-- Demo: https://demos.creative-tim.com/nuxt-black-dashboard
-- Download Page: https://www.creative-tim.com/product/nuxt-black-dashboard
-- Documentation: https://www.creative-tim.com/learning-lab/nuxt/overview/black-dashboard
-- License Agreement: https://www.creative-tim.com/license
-- Support: https://www.creative-tim.com/contact-us
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/nuxt-black-dashboard/issues)
+  - Presentar un detalle por API de alguno de los elementos en un listado
+  - Al realizar el request se debe utilizar un ID u otro identificador obtenido de un elemento del listado, deberán devolverse más datos sobre el mismo que los que figuran en el listado.
+  - El mismo debe proveer información de dos o más entidades relacionadas. La información adicional debe ser acorde al tipo de API (REST o GraphQL) utilizada.
 
-## Reporting Issues
-We use GitHub Issues as the official bug tracker for the Nuxt Black Dashboard. Here are some advices for our users that want to report an issue:
+  _Grupos de 1 o 2 integrates, al menos 1.
+  Grupos de 3 y 4 integrantes al menos 2.
+  Dos detalles básicos pueden ser reemplazados por 1 detalle parametrizable_
 
-1. Make sure that you are using the latest version of the Nuxt Black Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+  - Sólo se considerarán para nota adicional detalles que no coincidan con ABMCs creados.
 
-## Technical Support or Questions
+- Otros: En caso de querer implementar otros elementos en reemplazo o adición a los requeridos pactar con los docentes primero.
 
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
+#### 1.2.2 - Frontend
 
-## Licensing
+- El frontend al menos deberá permitir invocar a la API y mostrar los resultados de uno de los listados. Haciendo click en un elemento del listado (o parte de él) debe mostrar el detalle correspondiente a un elemento de dicho listado invocando a una API del listado creada para el backend.
 
-- Copyright 2018 Creative Tim (https://www.creative-tim.com)
-- Creative Tim [License](https://www.creative-tim.com/license)
+- El resto de la funcionalidad puede utilizarse mediante una herramienta similar a postman, restclient, curl o wget.
 
-## Useful Links
+- No se considerará trabajo adicional en el frontend para sumar nota ya que hay un TP dedicado a ello.
 
-More products from Creative Tim: <https://www.creative-tim.com/products>
+## 2 - Alcance y Entregas
 
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
+### 2.1 - Definición de Alcance
 
-Freebies: <https://www.creative-tim.com/products>
+El equipo deberá definir el alcance del trabajo práctico con el equipo docente. Indicando los criterios de aceptación.
 
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
+Las mismas podrán volverse a pactar con los profesores enviando las correcciones a la misma indicando, causas, acciones correctivas que se tomarán.
 
-## Social Media:
+En caso de realizar cambios sobre el alcance deberá dejarse una copia de la versión pactada original dentro del repositorio.
 
-Twitter: <https://twitter.com/CreativeTim>
+### 2.2 - Entrega Inicial
 
-Facebook: <https://www.facebook.com/CreativeTim>
+Para iniciar el proyecto deberá crear un fork de este repositorio.
+Editar el README.md para incluir:
 
-Dribbble: <https://dribbble.com/creativetim>
+En el readme de dicho repo debe figurar:
 
-Google+: <https://plus.google.com/+CreativetimPage>
+- Enunciado general del tp.
+- Indicado una breve descripción para cada item requerido.
+  - ABMC: nombre de la entidad y atributos.
+  - Listado: breve descripción del listado (1 línea), tipo (simple, complejo)
+  - Detalle: entidades involucradas y, si corresponde, los parámetros.
+- Miembros del equipo indicando, legajo, nombre y apellido.
+- Modelo de dominio o modelo de datos. Una imagen referenciada.
 
-Instagram: <https://instagram.com/creativetimofficial>
+Enviar por mail y telegram al profesor la URL del repositorio git para validar el alcance. Esperar la autorización del enunciado. Una vez hecho esto puede comenzar el desarrollo del mismo.
+
+Recuerde revisar el [checklist]
+
+### 2.3 - Entrega Final
+
+Para realizar la entrega deberá en primer lugar crearse un tag en el repositori de git.
+
+La entrega final deberá hacerse enviando por email y telegram a los profesores la URL del tag de git.
+
+Pactar con el docente un fecha para la defensa.
+
+## 3 - Criterio de correccion
+
+### 3.1 - Código
+
+- Diseño adecuado de la API.
+- Diseño del modelo de datos adecuado.
+- Usabilidad del sitio: debe ser fácil de usar, elegante y no tener contenido oculto o difícil de acceder
+- Diseño adecuado de la interfaz: uso apropiado de los tags html y de los estilos, ya sea utilizando un FW CSS o un preprocesador.
+- Calidad del código: uso adecuado de las características del FW y de la API.
+- Completitud de los requerimientos.
+
+### 3.2 - Repositorio
+
+- El desarrollo deberá realizarse en una plataforma de git gratuita. Se recomienda GitHub o GitLab.
+- Se evaluará el uso de git: Frecuencia y responsables de los commits, uso de branches y merge.
+
+### 3.3 - Defensa
+
+Todos los miembros del grupo deberán aprobar una defensa del código y funcionalidad del TP con los profesores.
+
+Si algún miembro no puede realizar la defensa correspondiente la misma no se considerará aprobada.
+
+Luego de la defensa el resultado puede ser:
+
+- Desarrollo aprobado - Defensa aprobada: se considerará el TP aprobado y se definirá una nota.
+- Desarrollo a revisión - Defensa aprobada: se considera aprobada la defensa y se indicarán cambios a realizar en el código. En este caso deberá corregirse el código y enviarse un nuevo tag con las correcciones indicadas en un plazo acordado con el docente. No deberá repetirse la defensa.
+- Desarrollo aprobado - Defensa a repetir: se considera el código adecuado y aprobado. Deberá repetirse la defensa en un plazo acordado con el docente.
+- Desarrollo a revisión - Defensa a repetir: se pactará una nueva fecha de entrega y defensa con el docente.
+
+[checklist]: ./checklist/README.md
