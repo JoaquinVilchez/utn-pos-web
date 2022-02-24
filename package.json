@@ -5,7 +5,7 @@
   "author": "creativetim",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --dotenv=./enviroments/.env --port 3001",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
