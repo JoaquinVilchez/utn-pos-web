@@ -1,6 +1,46 @@
 # TP Frontend TTADS
 
-## TP FINAL PUNTO DE VENTA
+# Metodología de trabajo
+
+## Entornos
+
+- master: Entorno de producción
+- staging: Entorno de prueba
+- development: Entorno de desarrollo
+
+## Ramas
+
+- development
+- staging
+
+## Nuevas ramas
+
+Para crear una nueva rama dirigirse a la rama **development** y ejecutar el siguiente comando:
+
+    git checkout -b <TIPO-DE-RAMA>_<REFERENCIA>
+
+Ejemplo:
+
+    git checkout -b feature_products-crud
+
+**TIPO DE RAMA:**
+
+- _feature_: Se usa para nuevas caracteristicas o actualizaciones. Nace SIEMPRE desde la rama **development** y se eliminan cuando son mergeadas.
+- _fix_: Se usa para solucionar problemas detectados en una rama existente. Nace SIEMPRE desde **development**.
+
+## Commits
+
+Para crear un nuevo commit seguir la siguiente nomenclatura:
+
+- ADD: Agregar una nueva funcionalidad
+- UPDATE: Actualizar una funcionalidad
+- FIX: Arreglar una funcionalidad
+
+## Pull Requests
+
+Para hacer un pull request compararlo con la rama **development**
+
+# TP FINAL PUNTO DE VENTA
 
 Integrantes: Caciorgna, Gerardo - Giovanni, Martin - Vilchez, Joaquin
 
