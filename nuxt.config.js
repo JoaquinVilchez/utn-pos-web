@@ -64,7 +64,8 @@ export default {
   */
   modules: [
     '@nuxtjs/pwa',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxtjs/axios',
   ],
   i18n: {
     locales: [
