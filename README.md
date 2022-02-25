@@ -1,5 +1,15 @@
 # TP Frontend TTADS
 
+# Instalación
+
+    git clone git@github.com:JoaquinVilchez/utn-pos-web.git
+    git checkout development
+    npm install
+
+# Ejecución
+
+    npm run dev
+
 # Metodología de trabajo
 
 ## Entornos
