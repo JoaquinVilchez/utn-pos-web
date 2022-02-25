@@ -5,12 +5,15 @@
   "author": "Caciorgna Gerardo, Martin Giovanni, Vilchez Joaquin",
   "private": true,
   "scripts": {
-    "dev": "nuxt --dotenv=./enviroments/.env --port 3001",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt-ts --dotenv=./enviroments/.env --port 3001",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
   },
   "dependencies": {
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.0.0-beta.16",
     "bootstrap": "4.3.1",
