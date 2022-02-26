@@ -1,5 +1,6 @@
 <template>
-  <div class="row"><h3>Starter page</h3></div>
+  <div class="card">
+  </div>
 </template>
 
 <script lang="ts">
