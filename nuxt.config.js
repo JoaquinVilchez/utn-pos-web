@@ -1,25 +1,12 @@
-/*!
+require('dotenv').config()
 
- =========================================================
- * Nuxt Black Dashboard - v1.0.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/nuxt-black-dashboard
- * Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
- * Coded by Creative Tim
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
 export default {
   mode: 'universal',
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt Black Dashboard',
+    title: 'Punto de venta - UTN TTADS',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -31,8 +18,11 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'}
     ],
     bodyAttrs: {
-      class: '' // Add `white-content` class here to enable "white" mode.
-    }
+      class: 'white-content' // Add `white-content` class here to enable "white" mode.
+    },
+    script: [
+      {src: "https://kit.fontawesome.com/e739f5c7c6.js", crossorigin: "anonymous"},
+    ]
   },
   router: {
     linkExactActiveClass: 'active'
@@ -53,12 +43,17 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    `~/plugins/dashboard-plugin.js`
+    `~/plugins/dashboard-plugin.js`,
+    '~/plugins/axios-accessor',
   ],
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/dotenv',
+  ],
   /*
   ** Nuxt.js modules
   */
@@ -103,5 +98,9 @@ export default {
         ]
       ]
     }
+  },
+  publicRuntimeConfig: {
+    apiURL: process.env.API_URL,
+    webURL: process.env.WEB_URL,
   }
 }

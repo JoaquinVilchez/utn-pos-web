@@ -2,10 +2,10 @@
   <div class="sidebar" :data="backgroundColor">
     <div class="sidebar-wrapper" ref="sidebarScrollArea">
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-          <img :src="logo" alt="app-logo" />
+        <a href="https://www.frro.utn.edu.ar/" target="_blank" class="simple-text logo-mini">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/UTN_logo.jpg" alt="app-logo" />
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="https://www.frro.utn.edu.ar/" target="_blank" class="simple-text logo-normal">
           {{ title }}
         </a>
       </div>
