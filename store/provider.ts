@@ -23,7 +23,7 @@ export const mutations = {
     _state.provider = null
   },
   fetchAllSuccess(_state, payload) {
-    _state.providers = payload.rows
+    _state.providers = payload
   },
   setFetchLoading(_state, payload) {
     _state.fetchLoading = payload
@@ -35,34 +35,21 @@ export const mutations = {
 
 export const actions = {
   async fetchAll({ state: _state, commit }){
-    commit('setFetchLoading', true)
-    try {
-      const url = `http://localhost:3000/api/providers`
+
+      const url = `http://localhost:5000/api/providers`
       const { data } = await $axios.get(url)
 
-      console.log(data)
+      commit('fetchAllSuccess', data)
 
       return data
-    } finally {
-      commit('setFetchLoading', false)
-    }
+
   },
   async fetchOne({ state: _state, commit  }, { id }) {
-    commit(mutations.setFetchOneLoading, true)
+    commit('fetchOneTrigger')
+    const url = 'http://localhost:5000/api/providers'
+    const { data } = await $axios.get(`${url}/${id}`)
+    const provider = new Provider(data)
 
-    commit(mutations.fetchOneTrigger)
-
-    try {
-      const url = `${process.env.API_URL}/providers`
-      console.log(url)
-      const { data } = await $axios.get(`${url}/${id}`)
-      const provider = new Provider(data.data)
-
-      commit(mutations.fetchOneSuccess, provider)
-
-      return provider
-    } finally {
-      commit(mutations.setFetchOneLoading, false)
-    }
+    commit('fetchOneSuccess', provider)
   },
 }

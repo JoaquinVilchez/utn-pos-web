@@ -13,7 +13,7 @@
 									header-cell-class-name="table-transparent"
 									header-row-class-name="table-transparent"
 									row-class-name="table-transparent"
-									:data="tableData"
+									:data="providers"
 								>
 									<el-table-column
 										min-width="150"
@@ -31,22 +31,30 @@
 										min-width="150"
 										sortable
 										label="Dirección"
-										property="address"
+										property="addres"
 									></el-table-column>
 									<el-table-column
 										min-width="150"
 										sortable
-										align="right"
-										header-align="right"
 										label="Teléfono"
 										property="phone"
 									></el-table-column>
 									<el-table-column
-										align="right"
-										header-align="right"
+										fixed="right"
 										label="Acciones"
-										property="actions"
-									></el-table-column>
+									>
+										<template slot-scope="scope">
+											<button
+												class="btn btn-sm btn-primary"
+												@click="viewProvider(scope.$index, providers)"
+												type="text"
+												size="small"
+												name="edit"
+											>
+												Ver
+											</button>
+										</template>
+									</el-table-column>
 								</el-table>
 							</card>
 						</div>
@@ -67,49 +75,8 @@ import { Table, TableColumn } from 'element-ui';
 })
 export default class extends Vue {
 
-	tableData = [
-		{
-			id: 1,
-			name: 'Dakota Rice',
-			email: '$36.738',
-			address: 'Niger',
-			phone: 'Oud-Turnhout'
-		},
-		{
-			id: 2,
-			name: 'Minerva Hooper',
-			email: '$23,789',
-			address: 'Curaçao',
-			phone: 'Sinaai-Waas'
-		},
-		{
-			id: 3,
-			name: 'Sage Rodriguez',
-			email: '$56,142',
-			address: 'Netherlands',
-			phone: 'Baileux'
-		},
-		{
-			id: 4,
-			name: 'Philip Chaney',
-			email: '$38,735',
-			address: 'Korea, South',
-			phone: 'Overland Park'
-		},
-		{
-			id: 5,
-			name: 'Doris Greene',
-			email: '$63,542',
-			address: 'Malawi',
-			phone: 'Feldkirchen in Kärnten'
-		}
-	]
-
 	mounted() {
 		this.fetchProviders()
-		setTimeout(() => {
-			console.log('HOLA: ', this.providers)
-		}, 3000)
 	}
 
 	get providers() {
@@ -118,6 +85,11 @@ export default class extends Vue {
 
 	fetchProviders() {
     this.$store.dispatch(`provider/fetchAll`)
+	}
+
+	viewProvider(index, rows) {
+		const provider = rows[index]
+		this.$router.push(`/providers/${provider._id}`)
 	}
 }
 </script>

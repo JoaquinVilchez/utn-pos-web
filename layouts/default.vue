@@ -18,9 +18,9 @@
       </template>
     </side-bar>
     <!--Share plugin (for demo purposes). You can remove it if don't plan on using it-->
-    <sidebar-share :background-color.sync="sidebarBackground" name=""> </sidebar-share>
+    <!-- <sidebar-share :background-color.sync="sidebarBackground" name="sidebar"> </sidebar-share> -->
     <div class="main-panel" :data="sidebarBackground">
-      <dashboard-navbar></dashboard-navbar>
+      <!-- <dashboard-navbar></dashboard-navbar> -->
       <router-view name="header"></router-view>
 
       <div

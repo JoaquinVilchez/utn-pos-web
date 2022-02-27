@@ -6,7 +6,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt Black Dashboard',
+    title: 'Punto de venta - UTN TTADS',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,7 +18,7 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'}
     ],
     bodyAttrs: {
-      class: '' // Add `white-content` class here to enable "white" mode.
+      class: 'white-content' // Add `white-content` class here to enable "white" mode.
     },
     script: [
       {src: "https://kit.fontawesome.com/e739f5c7c6.js", crossorigin: "anonymous"},

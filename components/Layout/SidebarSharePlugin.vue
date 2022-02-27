@@ -75,7 +75,7 @@
     data() {
       return {
         sidebarMini: true,
-        darkMode: true,
+        darkMode: false,
         isOpen: false,
         sidebarColors: [
           { color: 'primary', active: false, value: 'primary' },

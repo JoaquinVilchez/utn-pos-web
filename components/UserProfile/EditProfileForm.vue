@@ -60,7 +60,7 @@
             type="text"
             label="Address"
             placeholder="Home Address"
-            v-model="user.address"
+            v-model="user.addres"
           >
           </base-input>
         </div>
