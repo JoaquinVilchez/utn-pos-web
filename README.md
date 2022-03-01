@@ -27,6 +27,7 @@
 
 Para crear una nueva rama dirigirse a la rama **development** y ejecutar el siguiente comando:
 
+    git pull
     git checkout -b <TIPO-DE-RAMA>_<REFERENCIA>
 
 Ejemplo:
