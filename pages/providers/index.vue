@@ -31,7 +31,7 @@
 										min-width="150"
 										sortable
 										label="Dirección"
-										property="addres"
+										property="address"
 									></el-table-column>
 									<el-table-column
 										min-width="150"

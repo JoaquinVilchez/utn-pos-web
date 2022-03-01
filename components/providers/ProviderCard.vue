@@ -9,7 +9,7 @@
       <h2 class="title">{{provider.name}}</h2>
       <p class="description">{{provider.email}}</p>
       <p>{{provider.phone}}</p>
-      <p>{{provider.addres}}</p>
+      <p>{{provider.address}}</p>
     </div>
   </card>
 </template>

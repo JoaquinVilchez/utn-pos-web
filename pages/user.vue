@@ -6,7 +6,7 @@
 </template>
 <script>
 import EditProfileForm from '../components/UserProfile/EditProfileForm.vue';
-import UserCard from '../components/UserProfile/UserCard.vue';
+import UserCard from '../components/providers/ProviderCard.vue';
 
 export default {
   name: 'user',
